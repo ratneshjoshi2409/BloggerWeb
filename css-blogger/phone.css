@@ -1,0 +1,110 @@
+/* ********************************NAVIGATION BAR********************************************************************** */
+
+.nav-right {
+    display: none;
+}
+
+#nav-bar {
+    grid-template-areas: 'nav-left nav-left' 'nav-mid nav-mid';
+}
+
+.nav-left h2 {
+    text-align: center;
+    font-size: 4vw;
+}
+
+.nav-mid ul li {
+    margin: 0px 10px;
+}
+
+.nav-mid ul li a {
+    font-size: 3.2vw;
+}
+
+
+/* ********************************INTRO SECTION********************************************************************** */
+
+#intro-section h3 {
+    font-size: 7vw;
+}
+
+#intro-section h1 {
+    margin: 1vw;
+    font-size: 4.5vw;
+}
+
+#intro-section button {
+    margin: 2vw auto;
+    font-size: 3vw;
+    width: 39%;
+}
+
+
+/* ********************************CARDS SECTION********************************************************************** */
+
+#cards-section {
+    flex-direction: column;
+}
+
+.btn {
+    font-size: 2.8vw;
+}
+
+.card-write h6 {
+    font-size: 2.8vw;
+    margin: 10px;
+}
+
+
+/* ********************************CATEGORY SECTION********************************************************************** */
+
+#category {
+    grid-template-areas: 'category-left category-left ' 'category-right category-right ';
+}
+
+.btn-cat1 {
+    font-size: 2.5vw;
+    width: 30%;
+}
+
+.category-right {
+    display: none;
+}
+
+
+/* ********************************SLIDES SECTION********************************************************************** */
+
+#slide {
+    grid-template-areas: 'category-left category-left ' 'category-right category-right';
+}
+
+.slide-right h2 {
+    text-align: center;
+    font-size: 4.5vw;
+}
+
+.post-pre {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-mini-slide h3 {
+    font-size: 2.5vw;
+}
+
+
+/* ********************************FOOTER SECTION********************************************************************** */
+
+.foot-item {
+    width: 100vw;
+}
+
+.footer-main {
+    flex-direction: column;
+}
+
+.foot-item h2 {
+    font-size: 2.5vw;
+    font-family: 'BioRhyme', serif;
+    padding: 1vw 0vw;
+}

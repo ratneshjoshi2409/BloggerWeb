@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=B612:ital@1&family=Mulish:ital,wght@1,600&family=Oswald:wght@500&family=Rakkas&family=Titillium+Web:wght@200&family=Vollkorn+SC:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@800&family=Roboto:wght@500&display=swap');
+
+/* ***CSS Reset*** */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#grid {
+    display: grid;
+    grid-template-areas: 'navbar navbar' 'intro intro' 'cards cards' 'category category' 'slides slides' 'footer footer';
+}
+
+.item {
+    background-color: aqua;
+    border: 3px solid blue;
+}
+
+#slides {
+    grid-area: slides;
+}
+
+
+/* ********************Navigation bar ************************* */
+
+#nav-bar {
+    grid-area: navbar;
+    background-color: white;
+    padding: 1vw;
+    display: grid;
+    align-items: center;
+    grid-template-areas: 'nav-left nav-mid nav-right';
+    border: none;
+}
+
+.nav-left {
+    grid-area: nav-left;
+    color: gray;
+}
+
+.nav-left h2 {
+    letter-spacing: 2px;
+    font-family: 'Rakkas', cursive;
+    font-size: 2vw;
+}
+
+.nav-mid {
+    grid-area: nav-mid;
+    /* justify-content: center; */
+}
+
+.nav-mid ul {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-mid ul li {
+    list-style: none;
+    margin: 5px 10px;
+}
+
+.nav-mid ul li a {
+    font-family: 'Vollkorn SC', serif;
+    font-size: 1.2vw;
+    text-decoration: none;
+    color: gray;
+    padding: 1vw;
+}
+
+.nav-right {
+    grid-area: nav-right;
+    color: gray;
+    /* justify-content: right; */
+}
+
+.nav-icon {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-icon img {
+    width: 15px;
+    margin: 0 9px;
+}
+
+
+/* ********************Intro Section ************************* */
+
+#intro-section {
+    grid-area: intro;
+    display: grid;
+    grid-template-areas: 'h2-intro' 'h1-intro' 'button-intro';
+    color: white;
+    text-align: center;
+    background: url('../img/intro-section/tree-bgmain.jpg')no-repeat center center/cover;
+    padding: 15vw;
+    border: none;
+}
+
+#intro-section h3 {
+    grid-area: h2-intro;
+    font-family: 'B612', sans-serif;
+}
+
+#intro-section h1 {
+    grid-area: h1-intro;
+    margin: 2vw;
+    font-size: 2.5vw;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 3px;
+}
+
+#intro-section button {
+    grid-area: button-intro;
+    padding: 1vw;
+    width: 12%;
+    margin: auto;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: rgb(255, 190, 255);
+    font-family: 'Vollkorn SC', serif;
+    font-size: 1vw;
+    border: none;
+}
+
+
+/* ********************Cards Section ************************* */
+
+#cards-section {
+    grid-area: cards;
+    display: flex;
+    justify-content: center;
+    padding: 5vw;
+    background-color: rgb(236, 236, 236);
+    border: none;
+}
+
+.card-a {
+    margin: 2vw;
+    /* border: 3px solid blue; */
+    box-shadow: 13px 13px 13px gray;
+}
+
+
+/* .card-a img {
+    width: 150px;
+    height: inherit;
+    display: block;
+    margin: auto;
+} */
+
+.card-img-a {
+    /* border: 2px solid red; */
+    background: url('../img/card-section/food.jpg') no-repeat center center/cover;
+    height: 250px;
+}
+
+.card-img-b {
+    /* border: 2px solid red; */
+    background: url('../img/card-section/people-dance.jpg') no-repeat center center/cover;
+    height: 250px;
+}
+
+.card-img-c {
+    /* border: 2px solid red; */
+    background: url('../img/card-section/professional.jpg') no-repeat center center/cover;
+    height: 250px;
+}
+
+.card-write {
+    padding: 2.5vw 1vw;
+    text-align: center;
+}
+
+.card-write h3 {
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+}
+
+.card-write h6 {
+    font-size: 0.8vw;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.btn {
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: lawngreen;
+    background-image: linear-gradient(rgb(189, 250, 194), white);
+    font-family: 'Vollkorn SC', serif;
+    font-size: 0.8vw;
+    border: none;
+    margin: 10px;
+}
+
+
+/* ********************Category Section ************************* */
+
+#category {
+    grid-area: category;
+    display: grid;
+    grid-template-areas: 'category-left category-left category-right ';
+    padding: 5vw;
+    background-color: rgb(255, 249, 242);
+    border: none;
+}
+
+.category-left {
+    grid-area: category-left;
+    padding: 3vw;
+}
+
+.category-left h2 {
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cat-img {
+    background: url('../img/category-section/photographer-category.jpg')no-repeat center center/cover;
+    height: 24vw;
+    /* width: 600px; */
+}
+
+.category-right {
+    grid-area: category-right;
+    padding: 3vw;
+}
+
+.category-right h2 {
+    font-size: 1.5vw;
+    font-family: 'BioRhyme', serif;
+}
+
+.btn-cat-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-cat {
+    width: 16vw;
+}
+
+.mini-img {
+    background: url("../img/category-section/motorcycle-accident.jpg")no-repeat center center/cover;
+    height: 10vw;
+    width: 22vw;
+}
+
+.btn-cat1 {
+    padding: 8px 15px;
+    /* border-radius: 20px; */
+    cursor: pointer;
+    background-color: lawngreen;
+    background-image: linear-gradient(rgb(189, 250, 194), white);
+    font-family: 'Vollkorn SC', serif;
+    font-size: 0.8vw;
+    border: none;
+    width: 9vw;
+    margin: 2vw 0vw;
+}
+
+.post-mini h3 {
+    width: 22vw;
+    padding-top: 16px;
+    font-size: 1vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+.pop {
+    padding-top: 7vw;
+}
+
+
+/* ********************Slides Section ************************* */
+
+#slide {
+    grid-area: slides;
+    display: grid;
+    grid-template-areas: 'category-left category-left category-right ';
+    padding: 5vw;
+    background-color: rgb(255, 249, 242);
+    border: none;
+}
+
+.slide-left {
+    grid-area: category-left;
+    padding: 3vw;
+}
+
+.slide-left h2 {
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+.slide-img {
+    background: url('../img/category-section/woman-mountain.jpg')no-repeat center center/cover;
+    height: 25vw;
+}
+
+.slide-right {
+    grid-area: category-right;
+    padding: 3vw;
+}
+
+.slide-right h2 {
+    font-size: 1.5vw;
+    font-family: 'BioRhyme', serif;
+}
+
+.btn-cat-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.mini-img-slide1 {
+    background: url("https://image.freepik.com/free-photo/double-exposure-image-business-profit-growth_31965-3022.jpg")no-repeat center center/cover;
+    height: 10vw;
+    width: 22vw;
+}
+
+.mini-img-slide2 {
+    background: url("https://www.w3schools.com/w3css/img_lights.jpg")no-repeat center center/cover;
+    height: 10vw;
+    width: 22vw;
+}
+
+.mini-img-slide3 {
+    background: url('https://pi.tedcdn.com/r/talkstar-assets.s3.amazonaws.com/production/playlists/playlist_398/reconnect_with_nature.jpg?')no-repeat center center/cover;
+    height: 10vw;
+    width: 22vw;
+}
+
+.btn-cat1 {
+    padding: 8px 15px;
+    /* border-radius: 20px; */
+    cursor: pointer;
+    background-color: lawngreen;
+    background-image: linear-gradient(rgb(189, 250, 194), white);
+    font-family: 'Vollkorn SC', serif;
+    font-size: 0.8vw;
+    border: none;
+    width: 9vw;
+    margin: 2vw 0vw;
+}
+
+.post-mini-slide h3 {
+    width: 22vw;
+    padding-top: 16px;
+    font-size: 1vw;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 3vw;
+}
+
+.pop {
+    padding-top: 7vw;
+}
+
+
+/* ********************Footer Section ************************* */
+
+.footer-main {
+    display: flex;
+    /* text-align: center; */
+    background-color: black;
+    color: white;
+    /* display: grid; */
+    /* grid-template-areas: 'about news insta follow'; */
+    padding: 5vw;
+    /* border: none; */
+    justify-content: space-around;
+}
+
+#footer {
+    grid-area: footer;
+    border: none;
+}
+
+.about {
+    grid-area: about;
+}
+
+.news {
+    grid-area: news;
+}
+
+.news input {
+    color: rgb(83, 81, 81);
+    background-color: black;
+    padding: 4px;
+}
+
+.insta {
+    grid-area: insta;
+}
+
+.follow {
+    grid-area: follow;
+}
+
+.foot-item {
+    padding: 2vw;
+    width: 15vw;
+}
+
+.foot-item h2 {
+    font-size: 1.5vw;
+    font-family: 'BioRhyme', serif;
+    padding: 1vw 0vw;
+}
+
+.font-color {
+    color: rgb(83, 81, 81);
+    padding: 0.7vw 0vw
+}
+
+.insta-img img {
+    width: 5vw;
+    padding: 3px;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+}
+
+.nav-icon-foot {
+    display: flex;
+    /* justify-content: center */
+}
+
+.nav-icon-foot a img {
+    filter: invert(1);
+    width: 15px;
+    margin: 0 9px;
+}
+
+.footer-bottom {
+    background-color: black;
+    color: rgb(83, 81, 81);
+    text-align: center;
+    padding: 1vw;
+    font-family: 'Vollkorn SC', serif;
+}
+
+.footer-bottom span {
+    color: white;
+}
